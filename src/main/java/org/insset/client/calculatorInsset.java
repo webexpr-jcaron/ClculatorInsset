@@ -42,6 +42,7 @@ public class calculatorInsset implements EntryPoint {
    * This is the entry point method.
    */
   public void onModuleLoad() {
+      //merge
 //    final Button sendButton = new Button( messages.sendButton() );
 //    final TextBox nameField = new TextBox();
 //    nameField.setText( messages.nameField() );
