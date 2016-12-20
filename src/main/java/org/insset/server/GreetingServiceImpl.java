@@ -1,6 +1,6 @@
 package org.insset.server;
 
-import org.insset.client.GreetingService;
+import org.insset.client.service.GreetingService;
 import org.insset.shared.FieldVerifier;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 

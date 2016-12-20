@@ -1,4 +1,4 @@
-package org.insset.client;
+package org.insset.client.service;
 
 import com.google.gwt.user.client.rpc.RemoteService;
 import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
