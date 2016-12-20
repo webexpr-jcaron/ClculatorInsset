@@ -18,6 +18,7 @@ import com.google.gwt.user.client.ui.Label;
 import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.TextBox;
 import com.google.gwt.user.client.ui.VerticalPanel;
+import org.insset.client.calculator.CalculatorPresenter;
 import org.insset.client.service.GreetingServiceAsync;
 
 /**
@@ -153,6 +154,6 @@ public class calculatorInsset implements EntryPoint {
     MyHandler handler = new MyHandler();
     sendButton.addClickHandler(handler);
     nameField.addKeyUpHandler(handler);
-//      RootPanel.get().add(new CalculatorPresenter());
+      RootPanel.get().add(new CalculatorPresenter());
   }
 }
