@@ -9,7 +9,7 @@ import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.Scheduler;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
-import com.google.gwt.user.client.Window;
+import com.google.gwt.user.client.History;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.HTMLPanel;
 import com.google.gwt.user.client.ui.MenuItem;
@@ -30,12 +30,12 @@ public class Menu extends Composite {
      * Menu : accueil
      */
     @UiField
-    public MenuItem addition;
+    public MenuItem decimal;
     /**
      * Menu : accueil
      */
     @UiField
-    public MenuItem soustraction;
+    public MenuItem romain;
 
     interface MenuUiBinder extends UiBinder<HTMLPanel, Menu> {
     }
@@ -53,23 +53,23 @@ public class Menu extends Composite {
             @Override
             public void execute() {
 
-                Window.alert("Acceuil");
+                History.newItem("exemple", true);
             }
         });
-        addition.setScheduledCommand(new Scheduler.ScheduledCommand() {
+        decimal.setScheduledCommand(new Scheduler.ScheduledCommand() {
 
             @Override
             public void execute() {
 
-                Window.alert("Add!!");
+                History.newItem("decimal", true);
             }
         });
-        soustraction.setScheduledCommand(new Scheduler.ScheduledCommand() {
+        romain.setScheduledCommand(new Scheduler.ScheduledCommand() {
 
             @Override
             public void execute() {
 
-                Window.alert("-------");
+                History.newItem("romain", true);
             }
         });
     }

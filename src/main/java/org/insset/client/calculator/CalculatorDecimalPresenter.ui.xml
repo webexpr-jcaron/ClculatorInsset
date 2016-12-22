@@ -4,8 +4,9 @@
 
   <g:HTMLPanel>
 <div class="bs-section">
+    <menu:Menu ui:field="menu"/>
       <!--<texte:TitrePage size="1" ui:field="titrePage"/>-->
-<menu:Menu ui:field="menu"/>
+<!--<menu:Menu ui:field="menu"/>-->
       <!--<message:MessageZone ui:field="messageZone"/>-->
       <!--<g:Form ui:field="form" role="form">-->
         <g:FlowPanel>

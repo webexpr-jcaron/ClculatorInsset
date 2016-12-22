@@ -2,29 +2,14 @@
          xmlns:g='urn:import:com.google.gwt.user.client.ui'>
 
   <g:HTMLPanel>
-<div class="bs-section">
-      <!--<texte:TitrePage size="1" ui:field="titrePage"/>-->
-<g:MenuBar>
-   <g:MenuItem ui:field="accueil">Accueil</g:MenuItem>
-   <g:MenuItem ui:field="addition">Addition
-<!--     <g:MenuBar vertical="true">
-       <g:MenuItem>foo</g:MenuItem>
-       <g:MenuItem>bar</g:MenuItem>
-       <g:MenuItem>baz</g:MenuItem>
-     </g:MenuBar>-->
-   </g:MenuItem>
-   <g:MenuItem ui:field="soustraction"><b>Sustraction</b>
-<!--     <g:MenuBar vertical="true">
-       <g:MenuItem>uno</g:MenuItem>
-       <g:MenuItem>dos</g:MenuItem>
-       <g:MenuItem>tres</g:MenuItem>
-     </g:MenuBar>-->
-   </g:MenuItem>
- </g:MenuBar>
+    <div>
+        <g:MenuBar ui:field="menu">
+           <g:MenuItem ui:field="accueil">Exemple</g:MenuItem>
+           <g:MenuItem ui:field="decimal">Decimal</g:MenuItem>
+           <g:MenuItem ui:field="romain">Romain</g:MenuItem>
+        </g:MenuBar>
 
-      <!--</g:Form>-->
     </div>
-    <!-- E. Container Right -->
 
   </g:HTMLPanel>
 </ui:UiBinder>
