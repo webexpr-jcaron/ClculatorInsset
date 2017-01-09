@@ -4,7 +4,7 @@
 
   <g:HTMLPanel>
       <menu:Menu ui:field="menu"/>
-         <h1>Projet de mise en pratique Scrum</h1>       
+      <h1>Projet de mise en pratique Scrum</h1>       
     <div class="bs-section">
 
         <g:FlowPanel>
@@ -16,12 +16,11 @@
             <g:FlowPanel>          
               <g:TextBox ui:field="nom" text="Entrer votre nom"/>
             </g:FlowPanel>
-                        <g:FlowPanel>
+            <g:FlowPanel>
                 <g:Label ui:field="errorLabel" ></g:Label>
             </g:FlowPanel>
             <g:FlowPanel ui:field="formActions" >
-                <g:SubmitButton ui:field="boutonEnregistrer" text="Enregistrer"/>
-                <!--<g:InlineHTML>&nbsp;</g:InlineHTML>-->
+                <g:SubmitButton ui:field="boutonEnregistrer" text="Envoyer"/>
                 <g:ResetButton ui:field="boutonClear" text="Clear"/>
             </g:FlowPanel>
         </g:FlowPanel>
