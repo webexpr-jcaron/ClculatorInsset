@@ -3,12 +3,12 @@
         xmlns:menu="urn:import:org.insset.client.menu">
 
   <g:HTMLPanel>
-      <menu:Menu ui:field="menu"/>
-      <h1>Projet de mise en pratique Scrum</h1>       
+    <menu:Menu ui:field="menu"/>
+    <h1>Projet de mise en pratique Scrum</h1>       
     <div class="bs-section">
 
         <g:FlowPanel>
-          <g:FormPanel ui:field="aapForm"/>
+          <g:FormPanel/>
           
             <g:FlowPanel>
                 <g:Label>Quelle est votre nom ?</g:Label>

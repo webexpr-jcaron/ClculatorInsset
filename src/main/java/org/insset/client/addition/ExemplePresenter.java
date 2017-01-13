@@ -38,6 +38,7 @@ public class ExemplePresenter extends Composite {
     public TextBox nom;
     @UiField
     public Label errorLabel;
+
     /**
      * The message displayed to the user when the server cannot be reached or
      * returns an error.
@@ -57,13 +58,23 @@ public class ExemplePresenter extends Composite {
     interface AddUiBinder extends UiBinder<HTMLPanel, ExemplePresenter> {
     }
 
+    /**
+     * Create UiBinder for the view
+     */
     private static AddUiBinder ourUiBinder = GWT.create(AddUiBinder.class);
 
+    /**
+     * Constructeur
+     */
     public ExemplePresenter() {
+        //bind de la page
         initWidget(ourUiBinder.createAndBindUi(this));
         initHandler();
     }
 
+    /**
+     * Methode qui innitialise les handler pour les cliques sur les boutons
+     */
     protected void initHandler() {
         boutonClear.addClickHandler(new ClickHandler() {
             @Override

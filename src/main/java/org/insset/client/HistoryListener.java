@@ -20,8 +20,8 @@ public class HistoryListener implements ValueChangeHandler<String> {
     @Override
     public void onValueChange(ValueChangeEvent<String> event) {
 
-        //Accès a la page de calcul décimal
-        if (event.getValue().equals("decimal")) {
+        //Accès a la page de conversion roman
+        if (event.getValue().equals("roman")) {
             RootPanel.get().clear();
             RootPanel.get().add(new CalculatorDecimalPresenter());
         }
@@ -31,6 +31,9 @@ public class HistoryListener implements ValueChangeHandler<String> {
             RootPanel.get().clear();
             RootPanel.get().add(new ExemplePresenter());
         }
+
+        //Accès a la page pourcentage
+        //Add your code 
     }
 
 }
