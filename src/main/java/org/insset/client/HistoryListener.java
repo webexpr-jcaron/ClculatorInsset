@@ -8,7 +8,7 @@ package org.insset.client;
 import com.google.gwt.event.logical.shared.ValueChangeEvent;
 import com.google.gwt.event.logical.shared.ValueChangeHandler;
 import com.google.gwt.user.client.ui.RootPanel;
-import org.insset.client.addition.ExemplePresenter;
+import org.insset.client.exemple.ExemplePresenter;
 import org.insset.client.calculator.CalculatorDecimalPresenter;
 
 /**
