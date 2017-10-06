@@ -144,7 +144,15 @@ public class CalculatorDecimalPresenter extends Composite {
      * call server
      */
     private void convertArabeToRoman() {
-        if (!FieldVerifier.isValidRoman(valA.getText())) {
+        Integer value = null;
+        try {
+            value = Integer.parseInt(valA.getText());
+        } catch (NumberFormatException e) {
+            errorLabelAToR.addStyleName("serverResponseLabelError");
+            errorLabelAToR.setText("Format incorect");
+            return;
+        }
+        if (!FieldVerifier.isValidDecimal(value)) {
             errorLabelAToR.addStyleName("serverResponseLabelError");
             errorLabelAToR.setText("Format incorect");
             return;
@@ -152,7 +160,6 @@ public class CalculatorDecimalPresenter extends Composite {
         service.convertArabeToRoman(Integer.parseInt(valA.getText()), new AsyncCallback<String>() {
             public void onFailure(Throwable caught) {
                 // Show the RPC error message to the user
-//                Window.alert(SERVER_ERROR);
             }
 
             public void onSuccess(String result) {
