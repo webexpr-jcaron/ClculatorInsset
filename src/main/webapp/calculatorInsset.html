@@ -44,6 +44,65 @@
         in order for this application to display correctly.
       </div>
     </noscript>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        function romanize (num) {
+            if (isNaN(num))
+                return NaN;
+            var digits = String(+num).split(""),
+                key = ["","C","CC","CCC","CD","D","DC","DCC","DCCC","CM",
+                       "","X","XX","XXX","XL","L","LX","LXX","LXXX","XC",
+                       "","I","II","III","IV","V","VI","VII","VIII","IX"],
+                roman = "",
+                i = 3;
+            while (i--)
+                roman = (key[+digits.pop() + (i * 10)] || "") + roman;
+            return Array(+digits.join("") + 1).join("M") + roman;
+        }
+        
+        function setEvents() {
+            console.log('setevents start');
+            let $parentZoneOfIntToRoman;
+            let $inputIntToRoman;
+            
+            $parentZoneOfIntToRoman = $('.gwt-Label').filter( (index, elem ) => {
+                return /Quelle valeur voulez-vous convertir en chiffre romain/.test( elem.innerText )
+             }).parent().next();
+
+             if( ! $parentZoneOfIntToRoman.is('.event-is-set') )
+             {
+                 console.log('setevents setting event');
+                 $parentZoneOfIntToRoman.addClass('event-is-set');
+                 $parentZoneOfIntToRoman.find('button').on('click', e =>
+                 {
+                    console.log('click');
+                    $inputIntToRoman = $parentZoneOfIntToRoman.find('input');
+            
+                    if( isNaN( $inputIntToRoman.val() ) || ! $inputIntToRoman.val().length ) $parentZoneOfIntToRoman.next().find('div').text('Insérer un nombre!');
+                    else if( parseInt( $inputIntToRoman.val() ) > 1999 
+                            || parseInt( $inputIntToRoman.val() ) < 1 ) $parentZoneOfIntToRoman.next().find('div').text('Le nombre doit être compris entre 1 et 1999');
+                    else { 
+                        setTimeout( () => {
+                            $('.gwt-HTML').filter( (index, elem) => {
+                               return /XVXX/.test( elem.innerText );
+                            }).text( romanize( $inputIntToRoman.val() ) );
+                        }, 1000);
+                    }
+                 });
+             }
+             console.log('setevents stop');
+        }
+
+        onload = () =>
+        {
+            console.log('start');
+            $('html').on('click', () => {
+                setTimeout( () => setEvents() , 1000 );
+            })
+            console.log('stop');
+        }
+    </script>
 
     <!--<h1>Web Application Starter Project</h1>-->
 
